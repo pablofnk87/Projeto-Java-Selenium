@@ -33,9 +33,6 @@ public class Test {
         Select priorityField = new Select(wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("priority"))));
         priorityField.selectByIndex(2);
 
-        //Select profileField = new Select(wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("profile_id"))));
-        //profileField.selectByIndex(1);
-
         WebElement summaryField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("summary")));
         summaryField.sendKeys("Resumo do Bug");
 
@@ -48,24 +45,10 @@ public class Test {
         WebElement additionalInfoField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("additional_info")));
         additionalInfoField.sendKeys("Informações testes adicionais sobre o bug.");
 
-//        WebElement tagsField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("tag_string")));
-//        tagsField.sendKeys("marcador1, marcador2");
-
-        // Interação com o elemento "tag_select"
-//        Select tagSelectField = new Select(wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("tag_select"))));
-//        tagSelectField.selectByIndex(2);
-
-//        WebElement fileUploadField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("ufile[]")));
-//        fileUploadField.sendKeys("C:\\caminho\\para\\arquivo.txt");
-
-//        Select visibilityField = new Select(wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("view_state"))));
-//        visibilityField.selectByIndex(1);
-
         // Interação com o botão "Criar Nova Tarefa" no rodapé do formulário
         WebElement submitButtonFooter = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='report_bug_form']/div/div[2]/div[2]/input")));
         submitButtonFooter.click();
 
-        // Fecha o navegador
         //driver.quit();
     }
     @org.junit.Test
